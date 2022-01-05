@@ -75,3 +75,4 @@ fabric.properties
 # modules.xml
 
 main.tf.nogit
+secret.auto.tfvars

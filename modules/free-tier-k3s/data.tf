@@ -9,7 +9,7 @@ data "template_file" "ad_names" {
 
 data "template_file" "ad_worker_names" {
   count = length(var.freetier_worker_ad_list)
-  template = lookup(data.oci_identity_availability_domains.ad_list.availability_domains[(var.freetier_worker_ad_list[count.index] -1)], "name")
+  template = lookup(data.oci_identity_availability_domains.ad_list.availability_domains[count.index], "name")
 }
 
 data "oci_core_images" "images" {

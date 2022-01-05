@@ -7,7 +7,7 @@ resource "oci_core_instance" "externaldb" {
   compartment_id      = var.compartment_id
   shape               = "VM.Standard.E2.1.Micro"
 
-  display_name = "externaldb"
+  display_name = "${var.project_name}-externaldb"
 
   create_vnic_details {
     subnet_id        = oci_core_subnet.private_subnet.id

@@ -14,10 +14,10 @@ provider "oci" {
 
 provider "helm" {
   kubernetes {
-    config_path = "~/.kube/k3s"
+    config_path = "~/.kube/config"
   }
 }
 
 provider "kubernetes" {
-  config_path = "~/.kube/k3s"
+  config_path = "~/.kube/config"
 }
